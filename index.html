@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSafe | Cybersecurity Awareness</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- ScrollReveal CDN -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <!-- Header / Sticky Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 sticky-nav">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#home" class="text-3xl font-bold">
+                <i class="fas fa-user-secret text-neon-green"></i>
+                Cyber<span class="text-neon-blue">Safe</span>
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="nav-link text-gray-300 hover:text-neon-green transition-colors duration-300">Home</a>
+                <a href="#attacks" class="nav-link text-gray-300 hover:text-neon-green transition-colors duration-300">Attacks</a>
+                <a href="#browsing" class="nav-link text-gray-300 hover:text-neon-green transition-colors duration-300">Browsing</a>
+                <a href="#passwords" class="nav-link text-gray-300 hover:text-neon-green transition-colors duration-300">Passwords</a>
+                <a href="#social" class="nav-link text-gray-300 hover:text-neon-green transition-colors duration-300">Scams</a>
+                <a href="#quiz" class="nav-link text-gray-300 hover:text-neon-green transition-colors duration-300">Quiz</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-gray-900 border-t border-gray-700">
+            <a href="#home" class="block py-3 px-6 text-gray-300 hover:bg-gray-800">Home</a>
+            <a href="#attacks" class="block py-3 px-6 text-gray-300 hover:bg-gray-800">Attacks</a>
+            <a href="#browsing" class="block py-3 px-6 text-gray-300 hover:bg-gray-800">Browsing</a>
+            <a href="#passwords" class="block py-3 px-6 text-gray-300 hover:bg-gray-800">Passwords</a>
+            <a href="#social" class="block py-3 px-6 text-gray-300 hover:bg-gray-800">Social Engineering</a>
+            <a href="#quiz" class="block py-3 px-6 text-gray-300 hover:bg-gray-800">Quiz</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section: Home / Hero -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center py-20 px-6 hero-bg">
+            <div class="container mx-auto">
+                <div class="max-w-3xl mx-auto">
+                    <h1 class="reveal text-5xl md:text-7xl font-bold mb-6">
+                        Welcome to <span class="text-neon-green">CyberSafe</span>
+                    </h1>
+                    <h2 class="reveal text-2xl md:text-3xl font-semibold text-neon-blue mb-8">
+                        Your Shield in the Digital World
+                    </h2>
+                    <p class="reveal text-lg text-gray-300 mb-12 max-w-xl mx-auto">
+                        In an interconnected world, online threats are more sophisticated than ever. Our mission is to equip you with the knowledge to navigate the internet safely and securely.
+                    </p>
+                    <a href="#attacks" class="reveal btn-neon">
+                        Learn About Threats
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Types of Cyber Attacks -->
+        <section id="attacks" class="py-20 px-6">
+            <div class="container mx-auto">
+                <h2 class="reveal section-title text-4xl font-bold text-center mb-16">
+                    Common <span class="text-neon-green">Cyber Attacks</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Phishing Card -->
+                    <div class="reveal info-card p-6 text-center">
+                        <i class="fas fa-fish text-5xl text-neon-blue mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Phishing</h3>
+                        <p class="text-gray-400">
+                            Deceptive emails or messages disguised as legitimate ones to steal sensitive information like passwords, credit card numbers, and other personal data.
+                        </p>
+                    </div>
+                    
+                    <!-- Malware Card -->
+                    <div class="reveal info-card p-6 text-center">
+                        <i class="fas fa-bug-slash text-5xl text-neon-blue mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Malware</h3>
+                        <p class="text-gray-400">
+                            Malicious software (viruses, worms, trojans) designed to infiltrate, damage, or gain unauthorized access to a computer system.
+                        </p>
+                    </div>
+                    
+                    <!-- Ransomware Card -->
+                    <div class="reveal info-card p-6 text-center">
+                        <i class="fas fa-file-invoice-dollar text-5xl text-neon-blue mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Ransomware</h3>
+                        <p class="text-gray-400">
+                            A type of malware that encrypts a victim's files, making them inaccessible. The attacker then demands a ransom payment to restore access.
+                        </p>
+                    </div>
+                    
+                    <!-- DDoS Attack Card -->
+                    <div class="reveal info-card p-6 text-center">
+                        <i class="fas fa-server text-5xl text-neon-blue mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">DDoS Attack</h3>
+                        <p class="text-gray-400">
+                            (Distributed Denial of Service) An attempt to disrupt the normal traffic of a server or network by overwhelming it with a flood of internet traffic.
+                        </p>
+                    </div>
+                    
+                    <!-- Man-in-the-Middle Card -->
+                    <div class="reveal info-card p-6 text-center">
+                        <i class="fas fa-users-slash text-5xl text-neon-blue mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Man-in-the-Middle</h3>
+                        <p class="text-gray-400">
+                            An attacker secretly positions themselves between a user and an application, intercepting and possibly altering communications.
+                        </p>
+                    </div>
+
+                    <!-- SQL Injection Card -->
+                    <div class="reveal info-card p-6 text-center">
+                        <i class="fas fa-database text-5xl text-neon-blue mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">SQL Injection</h3>
+                        <p class="text-gray-400">
+                            A technique where attackers insert malicious SQL code into queries to manipulate a database and gain unauthorized access to data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section: Safe Browsing Practices -->
+        <section id="browsing" class="py-20 px-6 bg-gray-900" style="background-color: var(--bg-light);">
+            <div class="container mx-auto">
+                <h2 class="reveal section-title text-4xl font-bold text-center mb-16">
+                    Safe <span class="text-neon-blue">Browsing Practices</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- HTTPS Card -->
+                    <div class="reveal info-card p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-lock text-3xl text-neon-green mr-4"></i>
+                            <h3 class="text-2xl font-semibold">Always Use HTTPS</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            Look for the padlock icon and "https" in the URL. This ensures your connection to the website is encrypted and secure.
+                        </p>
+                    </div>
+                    
+                    <!-- Unknown Links Card -->
+                    <div class="reveal info-card p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-link-slash text-3xl text-neon-green mr-4"></i>
+                            <h3 class="text-2xl font-semibold">Avoid Unknown Links</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            Be wary of links from unknown senders or on suspicious websites. Hover over links to preview the destination URL before clicking.
+                        </p>
+                    </div>
+                    
+                    <!-- Software Updates Card -->
+                    <div class="reveal info-card p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-cloud-arrow-down text-3xl text-neon-green mr-4"></i>
+                            <h3 class="text-2xl font-semibold">Keep Software Updated</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            Regularly update your operating system, browser, and antivirus software to patch security vulnerabilities.
+                        </p>
+                    </div>
+                    
+                    <!-- VPN Card -->
+                    <div class="reveal info-card p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-user-shield text-3xl text-neon-green mr-4"></i>
+                            <h3 class="text-2xl font-semibold">Use a VPN</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            A Virtual Private Network (VPN) encrypts your internet traffic, especially important when using public Wi-Fi networks.
+                        </p>
+                    </div>
+                    
+                    <!-- Pop-ups Card -->
+                    <div class="reveal info-card p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-window-maximize text-3xl text-neon-green mr-4"></i>
+                            <h3 class="text-2xl font-semibold">Beware of Pop-ups</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            Never enter personal information into pop-up windows. Use a reputable pop-up blocker and close suspicious windows carefully.
+                        </p>
+                    </div>
+                    
+                    <!-- Public Wi-Fi Card -->
+                    <div class="reveal info-card p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-wifi text-3xl text-neon-green mr-4"></i>
+                            <h3 class="text-2xl font-semibold">Secure Public Wi-Fi</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            Avoid accessing sensitive accounts (like banking) on public Wi-Fi. If you must, always use a VPN to encrypt your connection.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Password Security -->
+        <section id="passwords" class="py-20 px-6">
+            <div class="container mx-auto">
+                <h2 class="reveal section-title text-4xl font-bold text-center mb-16">
+                    <span class="text-neon-green">Password</span> Security
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Strong Passwords Card -->
+                    <div class="reveal info-card p-6 text-center">
+                        <i class="fas fa-key text-5xl text-neon-green mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Strong Passwords</h3>
+                        <p class="text-gray-400">
+                            Create complex passwords (12+ characters) using a mix of uppercase, lowercase, numbers, and symbols. Avoid common words or personal info.
+                        </p>
+                    </div>
+                    
+                    <!-- Password Manager Card -->
+                    <div class="reveal info-card p-6 text-center">
+                        <i class="fas fa-address-book text-5xl text-neon-green mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Password Managers</h3>
+                        <p class="text-gray-400">
+                            Use a password manager to generate and store unique, strong passwords for all your accounts. You only need to remember one master password.
+                        </p>
+                    </div>
+                    
+                    <!-- 2FA Card -->
+                    <div class="reveal info-card p-6 text-center">
+                        <i class="fas fa-shield-halved text-5xl text-neon-green mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-3">Enable 2FA/MFA</h3>
+                        <p class="text-gray-400">
+                            Two-Factor Authentication (2FA) adds an extra layer of security, requiring a second verification step (e.g., a code from your phone) to log in.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Social Engineering -->
+        <section id="social" class="py-20 px-6" style="background-color: var(--bg-light);">
+            <div class="container mx-auto">
+                <h2 class="reveal section-title text-4xl font-bold text-center mb-16">
+                    <span class="text-neon-blue">Social Engineering</span> Scams
+                </h2>
+                <p class="reveal text-lg text-center text-gray-400 max-w-2xl mx-auto mb-12">
+                    Attackers often manipulate human psychology rather than technology. Here are common examples.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Fake Bank Call -->
+                    <div class="reveal info-card p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-phone-volume text-3xl text-neon-blue mr-4"></i>
+                            <h3 class="text-xl font-semibold">Fake Bank Call</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            An attacker calls pretending to be from your bank, claiming there's an issue with your account and asking for your password or PIN to "verify" your identity.
+                        </p>
+                    </div>
+                    
+                    <!-- OTP Scam -->
+                    <div class="reveal info-card p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-comment-sms text-3xl text-neon-blue mr-4"></i>
+                            <h3 class="text-xl font-semibold">OTP Scam</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            You receive an unsolicited One-Time Password (OTP) text, followed by a call from someone claiming they sent it by mistake and asking you to read it to them.
+                        </p>
+                    </div>
+                    
+                    <!-- Fake Job Offer -->
+                    <div class="reveal info-card p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-briefcase text-3xl text-neon-blue mr-4"></i>
+                            <h3 class="text-xl font-semibold">Fake Job Offer</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            A "recruiter" offers you a too-good-to-be-true job, but requires you to pay for "training materials" or provide bank details for "direct deposit" upfront.
+                        </p>
+                    </div>
+                    
+                    <!-- Fake Urgency Email -->
+                    <div class="reveal info-card p-6">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-envelope-open-text text-3xl text-neon-blue mr-4"></i>
+                            <h3 class="text-xl font-semibold">Urgent Email Scam</h3>
+                        </div>
+                        <p class="text-gray-400">
+                            An email from a "boss" or "CEO" (with a spoofed name) asks you to urgently buy gift cards for a client and send them the codes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section: Cyber Quiz -->
+        <section id="quiz" class="py-20 px-6">
+            <div class="container mx-auto max-w-2xl">
+                <h2 class="reveal section-title text-4xl font-bold text-center mb-16">
+                    Test Your <span class="text-neon-green">Knowledge</span>
+                </h2>
+                
+                <div id="quiz-container" class="reveal info-card p-8">
+                    <!-- Question will be injected here -->
+                    <h3 id="question-text" class="text-2xl font-semibold mb-6"></h3>
+                    
+                    <!-- Options will be injected here -->
+                    <div id="options-container" class="mb-8"></div>
+                    
+                    <!-- Navigation -->
+                    <button id="next-btn" class="btn-neon w-full">Next Question</button>
+                    <button id="submit-btn" class="btn-neon-blue w-full hidden">Submit Quiz</button>
+                </div>
+                
+                <!-- Score / Results -->
+                <div id="score-container" class="hidden text-center info-card p-8">
+                    <h3 id="score-text" class="text-3xl font-bold mb-6"></h3>
+                    <p id="score-feedback" class="text-lg text-gray-300 mb-8"></p>
+                    <button id="retry-btn" class="btn-neon">Try Again</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t" style="border-color: var(--border-color); background-color: var(--bg-light);">
+        <div class="container mx-auto text-center text-gray-400">
+            <p>&copy; 2025 CyberSafe. All rights reserved.</p>
+            <p class="text-sm mt-2">This website is for educational purposes only.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+</html>
